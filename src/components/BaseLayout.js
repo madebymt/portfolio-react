@@ -1,27 +1,28 @@
 import React , {Component} from 'react'
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import {Route, NavLink, Link} from 'react-router-dom'
 import '../style/App.css'
 
 
 class BaseLayout extends Component {
    render(){
-  // I can style here
     return (
-    <div className="container">
-        <div>
-            <Link ClassName = 'link' to = '/Home'>
-                  <h3> Home </h3>
-            </Link>
-            <Link ClassName = 'link' to = '/About'>
-                  <h3> About </h3>
-            </Link>
-            <Link ClassName = 'link' to = '/Portfolio'>
-                  <h3> Portfolio </h3>
-            </Link>
-        </div>
+   <div>
+     <div className="container">
+        <header>
+                <div className = 'nav'>
+                <Link to= '/'>
+                     <i classame="fa fa-diamond fa-2x" aria-hidden="true"></i>
+                </Link>
+
+                    <NavLink  exact to = '/'> Home </NavLink >
+                    <NavLink  activeClassName = 'link' to = '/About'> About </NavLink >
+                    <NavLink  activeClassName = 'link' to = '/Portfolio'>Portfolio </NavLink >
+                    <NavLink  activeClassName = 'link' to = '/Contact'> Contact </NavLink>
+             </div>
+        </header>
         {this.props.children}
     </div>
-
+ </div>
    );
   }
  }

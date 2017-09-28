@@ -5,20 +5,20 @@ import Home from './components/Home'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
 import BaseLayout from './components/BaseLayout'
+import Contact from './components/Contact'
 
 class App extends Component {
   render() {
     return (
         <BrowserRouter>
-
              <BaseLayout>
-                
-                <Home/>
-                <div classname = "route">
-                   <Route path = '/' component = {Home}/>
+                <div className = "route">
+                   <Route path = '/' exact component = {Home}/>
                    <Route path = '/About' component= {About}/>
-                   <Route path = '/Portfolio' component = {Portfolio}/>
-                   </div>
+                   <Route path = '/Portfolio'  component = {Portfolio}/>
+                   <Route path = '/contact'  component = {Contact}/>
+
+                </div>
              </BaseLayout>
         </BrowserRouter>
     );
