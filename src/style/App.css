@@ -19,14 +19,13 @@ header {
 }
 
 .nav a:hover,
-.nav a:active
+.nav a.link
 {
     background-color: #6d4c41;
     color:white;
     padding: 1rem;
 
 }
-
 
 img {
     width: 20%;
